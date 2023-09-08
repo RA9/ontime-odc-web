@@ -1,107 +1,62 @@
-import React, {useState} from 'react'
-import {FaBars,FaTimes} from 'react-icons/fa'
-// import {Link} from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
+import NavBar from './NavBar';
 
 const Home = () => {
-    const [handBugger, setHandBugger] = useState(false);
 
-    const handleClick = () => {
-        setHandBugger(!handBugger)
+  const ImgData =[
+    {
+      image:'/images/ontime_App.jpg'
+    },
+    {
+      image:'/images/ontime2.png'
+    },
+    {
+      image:'/images/ontime3.png'
     }
+  ]
 
-    // const navRef = useRef()
-
-    // const showNavbar = () =>{
-    //   navRef.current.classList.toggle("responsive_nav")
-    // }
+  const ImageProp = ({ image }) => {
+    return (
+      <div className='justify-center text-center sm:m-20 shadow-2xl'>
+        <img src={image} alt='img' width='200' height='100' />
+      </div>
+    );
+  };
 
   return (
     <div>
-      <header className='sm:flex block justify-between p-4 bg-black'>
-      <div className='bg-white sm:p-4 p-2 max-w-4xl  rounded-xl'>
-       <img  src='/OntimeLogo.png' width='150' height='100' alt='img'/> 
-      </div>
-           <div  className=''>
-           <nav >
-           <ul className='hidden sm:flex p-2 text-white'>
-             <li className='m-2 text-xl'>
-               About
-             </li>
-             <li className='m-2 text-xl'>
-               Contact
-             </li>
-             <li className=' ml-10 mr-10 text-xl bg-orange-500 p-2 pl-4 pr-4 hover:border-white rounded-xl'>
-               DownLoad
-             </li>
-           </ul>
-         </nav>
-           </div>
-           
-        
-           {/** This is the mobile section  */}
-        <div className='sm:hidden'>
-            {!handBugger ? (<div className='m-4'>
-            <FaBars size={33} color='white' onClick={()=> setHandBugger(true)}/>
-            </div>):
-            ( <div
-                className='absolute top-0 left-0  bottom-0 justify-center items-center 
-                w-80 h-screen bg-black ease-in-out duration-300 text-center' 
-            >
-            <FaTimes className='text-left m-4' size={33} color='white' onClick={()=>setHandBugger(false)}/>
-            <nav className=''>
-            <ul className='mt-16 p-4 text-white'>
-                <li className='m-2 text-xl'>
-                About
-                </li>
-                <li className='m-2 text-xl'>
-                Contact
-                </li>
-                <li className=' ml-10 mr-10 text-xl bg-orange-500 p-2 pl-4 pr-4 hover:font-bold rounded-xl'>
-                DownLoad
-                </li>
-          </ul>
-            </nav>
-        </div>
-            )}
-            </div>
+      <header>
+        <NavBar/>
       </header>
       {/** This is the body section  */}
-      <div className='sm:m-20 sm:text-8xl text-xl'>
-       <h1>This is the body section</h1>
-      </div>
-
-      {/** This is the footer section  */}
-
-      <div className='bg-black text-white p-4'>
-      <footer>
-          <div className='sm:flex justify-between'>
-          <div  className='flex items-center '>
+      <div className=''>
+        <div>
+          <div className='sm:shadow-2xl sm:m-6 m-4 sm:p-20'>
+          <p className='sm:text-6xl p-2 font-bold text-4xl'>OnTime</p>
+          <h1 className='m-4 font-bold sm:text-2xl '>DownLoad App</h1>
           <div>
-             <img  className='rounded-xl m-auto mr-4' src='/apple.png' width='50' height='50' alt='img' />
-             <h1>Apple</h1>
-       </div>
-     <div>
-     <img className='bg-white sm:w-10 sm:h-10 p-2 rounded-xl m-auto' src='/Playstore.png' width='50' height='30' alt='img' />
-     <h1>PlayStore</h1>
-   </div>
-       </div>
-       <div  className='flex  items-center grid-rows-3 grid-flow-row justify-between'>
-       <div>
-          <img className='rounded-xl m-2' src='/facebook.png' width='110' height='50' alt='img' />
-    </div>
-  <div>
-  <img className=' m-2' src='/github.png' width='60' height='50' alt='img' />
-</div>
-<div className='sm:w-10'>
-<img src='/instergram.png' width='80' height='50' alt='img' />
-</div>
-    </div>
+            <button  className='m-2 bg-orange-500 sm:p-4 p-2 rounded-2xl text-white font-bold hover:bg-orange-300 hover:text-black'>
+               <Link to='/download'>Apple Store</Link>
+            </button>
+            <button className='m-2 bg-orange-500 sm:p-4 p-2 rounded-2xl text-white font-bold hover:bg-orange-300 hover:text-black'>
+            <Link to='/download'>PlayStore Store</Link>
+            </button>
           </div>
-        <div className='text-center sm:text-xl'>
-          {/* Add your footer content here */}
-          &copy; OnTime 2023. All right reserved
+          </div>
         </div>
-      </footer>
+        <div className='flex p-2 justify-center sm:m-10 '>
+        {ImgData.map((item, index) => (
+          <div key={index} className='m-2 sm:m-auto shadow-2xl rounded-xl'>
+            <ImageProp image={item.image} />
+          </div>
+        ))}
+      </div>
+      </div>
+      {/** This is the footer section  */}
+      <div>
+        <Footer/>
     </div>
     </div>
   )
