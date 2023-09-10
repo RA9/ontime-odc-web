@@ -55,7 +55,7 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row sm:shadow-2xl sm:m-6 m-4 sm:p-20 rounded-lg">
             <div>
               <p className="sm:text-6xl p-2 font-bold text-4xl">OnTime</p>
-              <p className="m-4 ">
+              <p className="m-4 text-gray-600">
                 OnTime visitor management app is to provide a comprehansive
                 solution for managing visitors entering and exiting the Orange
                 Digital Center(ODC). The app aims to enhance the visitor
@@ -69,14 +69,14 @@ const Home = () => {
                 <Link to="/download">PlayStore Store</Link>
               </button>
             </div>
-            <img src="/images/ontimeart.jpg"></img>
+            <img src="/images/ontimeart.jpg" alt="Ontime App Page Sample"></img>
           </div>
         </div>
         <div className="flex p-2 justify-center flex-col lg:flex-row sm:m-10 ">
           {ImgData.map((item, index) => (
             <div
               key={index}
-              className="sm:m-auto shadow-2xl w-full lg:w-1/5 mb-10 rounded-xl bg-gray-50"
+              className="sm:m-auto shadow-2xl w-full lg:w-1/5 mb-10 rounded-xl text-gray-600 bg-gray-50"
             >
               <TextProp text={item.text} />
             </div>

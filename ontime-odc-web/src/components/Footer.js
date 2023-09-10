@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSquareFacebook,
@@ -10,32 +9,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const ImgData = [
-    {
-      image: "/images/facebook.png",
-    },
-    {
-      image: "/images/github.png",
-    },
-    {
-      image: "/instergram.png",
-    },
-  ];
-
-  const ImageProp = ({ image }) => {
-    return (
-      <div>
-        <img
-          className="rounded-3xl"
-          src={image}
-          alt="img"
-          width="50"
-          heigh="50"
-        />
-      </div>
-    );
-  };
-
   return (
     <>
       <footer className="bg-black text-gray-400 p-7 flex flex-col lg:flex-row">
@@ -108,16 +81,32 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex gap-2.5 flex-col ml-24 lg:ml-10 text-gray-400">
-              <a href="">Contact</a>
-              <a href="">Up Coming Events</a>
-              <a href="">Up Coming Courses</a>
-              <a href="">Orange Digital Center Liberia</a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Contact
+              </a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Up Coming Events
+              </a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Up Coming Courses
+              </a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Orange Digital Center Liberia
+              </a>
             </div>
             <div className="flex gap-2.5 flex-col ml-24 lg:ml-10 text-gray-400">
-              <a href="">Contact</a>
-              <a href="">Up Coming Events</a>
-              <a href="">Up Coming Courses</a>
-              <a href="">Orange Digital Center Liberia</a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Contact
+              </a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Up Coming Events
+              </a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Up Coming Courses
+              </a>
+              <a href="https://digitalcenter.orange.com/course/index.php?categoryid=30&lang=en">
+                Orange Digital Center Liberia
+              </a>
             </div>
           </div>
         </div>
