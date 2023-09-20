@@ -48,7 +48,7 @@ const About = () => {
         return(
             <div className=' justify-items-center  block sm:p-2 m-2 rounded-xl'>
                <div className='shadow-2xl rounded-2xl p-4  text-center bg-slate-800'>
-               <img className='m-auto rounded-full  outline-white' src={image} alt="user img" width="200" height="200"/>
+               <img className='m-auto object-cover w-48 h-auto rounded-full  outline-white' src={image} alt="user img" width="200" height="200"/>
                  <h1 className='text-xl text-center font-bold p-2 text-orange-600'>{name}</h1>
                  <p className=' text-center text-white mb-2'>{text}</p>
                  <div className='flex justify-center'>
