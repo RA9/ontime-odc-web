@@ -22,10 +22,10 @@ const NavBar = () => {
               <Link to="/about">About</Link>
            </li>
            <li className='m-2 text-xl'>
-           <Link to="/contact">Contact</Link>
+           <Link to="/contact">Contact Us</Link>
            </li>
            <li className=' ml-10 mr-10 text-xl bg-orange-500 p-2 pl-4 pr-4 hover:border-white rounded-xl'>
-           <Link to='/download'>DownLoad</Link>  
+           <Link to='/download'>Download</Link>
            </li>
          </ul>
        </nav>
@@ -48,10 +48,10 @@ const NavBar = () => {
               <Link to='/about' onClick={()=> setHandBugger(false)}>About</Link>
               </li>
               <li className='m-2 text-xl'>
-              <Link to='/contact' onClick={()=> setHandBugger(false)}>Contact</Link>
+              <Link to='/contact' onClick={()=> setHandBugger(false)}>Contact Us</Link>
               </li>
               <li className=' ml-10 mr-10 text-xl bg-orange-500 p-2 pl-4 pr-4 hover:font-bold rounded-xl'>
-              <Link to='/contact' onClick={()=> setHandBugger(false)}>DownLoad</Link>
+              <Link to='/contact' onClick={()=> setHandBugger(false)}>Download</Link>
               </li>
         </ul>
           </nav>

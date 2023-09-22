@@ -35,13 +35,13 @@ const Home = () => {
         <div>
           <div className='sm:shadow-2xl sm:m-6 m-4 sm:p-20'>
           <p className='sm:text-6xl p-2 font-bold text-4xl'>OnTime</p>
-          <h1 className='m-4 font-bold sm:text-2xl '>DownLoad App</h1>
+          <h1 className='m-4 font-bold sm:text-2xl '>Download App</h1>
           <div>
             <button  className='m-2 bg-orange-500 sm:p-4 p-2 rounded-2xl text-white font-bold hover:bg-orange-300 hover:text-black'>
                <Link to='/download'>Apple Store</Link>
             </button>
             <button className='m-2 bg-orange-500 sm:p-4 p-2 rounded-2xl text-white font-bold hover:bg-orange-300 hover:text-black'>
-            <Link to='/download'>PlayStore Store</Link>
+            <Link to='/download'>PlayStore</Link>
             </button>
           </div>
           </div>
