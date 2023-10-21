@@ -1,36 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import About from './components/About';
-import Contact from './components/Contact';
-import Download from './components/Download';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Download from "./components/Download";
+import Dashboard from "./components/Dashboard";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <App />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
   {
     path: "/about",
-    element: <About />
+    element: <About />,
   },
   {
     path: "/contact",
-    element: <Contact />
+    element: <Contact />,
   },
   {
     path: "/download",
-    element: <Download />
-  }
-])
+    element: <Download />,
+  },
+]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-        <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
