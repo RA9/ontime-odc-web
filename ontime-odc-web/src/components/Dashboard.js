@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Chart } from "chart.js/auto";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
+import DashboardCard from "./DashboardCard";
 
 const data = {
   labels: [
@@ -58,33 +60,14 @@ const Dashboard = () => {
       </header>
       <div className="mt-5">
         <div className="flex mt-4 p-4 gap-4">
-          <div className="w-1/2 flex border-black border justify-center align-center h-[50%] p-4 rounded-[10px]">
-            <p className="font-bold mb-2 mt-0 absolute 2xl:text-bold pt-2">
-              Total Logged In Users
-            </p>
-            <p className="my-4 top-10 text-center p-2 ">100</p>
-          </div>
-          <div className="w-1/2 flex border-black border justify-center align-center h-[50%] p-4 rounded-[10px]">
-            <p className="font-bold mt-0 absolute  pt-[1px]">Total Events</p>
-            <p className="my-4 text-center p-2">5</p>
-          </div>
-          <div className="w-1/2 flex border-black border  justify-center align-center h-[50%] p-4 rounded-[10px]">
-            <p className="font-bold mt-[-12px]">Gender</p>
-            <div className="flex justify-between w-full ">
-              <div className="flex flex-col items-start">
-                <p className="mx-1">Male</p>
-                <p className="mx-1">Female</p>
-              </div>
-              <div className="flex flex-col items-end">
-                <p className="mx-1">75</p>
-                <p className="mx-1">25</p>
-              </div>
-            </div>
-          </div>
+          <DashboardCard title="Total LoggedIn Users" amount="100" />
+          <DashboardCard title="Total Events" amount="5" />
+          <DashboardCard title="Genders" female="30" male="70" />
         </div>
         <div className="flex m-4 mt-1 border-black border rounded-[10px] justify-center align-center">
           <canvas
             ref={canvasRef}
+            setData={setData}
             style={{ width: "100%", height: "5%/2" }}
           ></canvas>
         </div>
@@ -97,6 +80,9 @@ const Dashboard = () => {
           <hr className="absolute bg-black w-full h-[2px] mt-[30px]" />
         </div>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
