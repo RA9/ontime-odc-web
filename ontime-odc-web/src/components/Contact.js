@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import NavBar from './NavBar'
+import { eventsData } from './EventData'
 
 const Contact = () => {
   return (
@@ -11,7 +12,7 @@ const Contact = () => {
             <h1>Contact Page</h1>
           <div>
         <Footer/>
-      </div>
+      <h1>contact</h1>
     </div>
   )
 }
